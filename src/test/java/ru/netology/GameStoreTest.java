@@ -69,5 +69,36 @@ public class GameStoreTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void addDoubleGames() {
+        GameStore store = new GameStore();
+
+        Game game1 = store.publishGame("NFS", "Races");
+        assertThrows(RuntimeException.class, () -> {
+            store.publishGame("NFS", "Races");
+        });
+    }
+
+    @Test
+    public void addNegativePlaybackTime() {
+        GameStore store = new GameStore();
+
+        Game game1 = store.publishGame("NFS", "Races");
+        Game game2 = store.publishGame("Far Cry", "Shooter");
+        Game game3 = store.publishGame("Hitman", "Shooter");
+
+        store.addPlayTime("Roma", 3);
+        store.addPlayTime("Misha", 1);
+        store.addPlayTime("Denis", 5);
+        store.addPlayTime("Kirill", -5);
+        store.getMostPlayer();
+
+        String actual = store.getMostPlayer();
+        String expected = "Kirill";
+
+        assertEquals(expected, actual);
+
+    }
+
     // другие ваши тесты
 }
