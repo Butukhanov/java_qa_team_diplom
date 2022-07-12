@@ -20,15 +20,36 @@ public class GameStoreTest {
     public void shouldPlayTime() {
 
         GameStore store = new GameStore();
-        Player player = new Player("Petya");
+        Player player = new Player("Irina");
 
         Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
         Game game1 = store.publishGame("Нетология Баттл Онлайн2", "Аркады2");
-        store.addPlayTime("Petya", 1);
-        store.addPlayTime("Vasya", 1);
-        store.addPlayTime("Anna", 1);
-        store.getMostPlayer();
+        store.addPlayTime("Irina", 1);
+        store.addPlayTime("Sasha", 1);
+        store.addPlayTime("Masha", 1);
 
+        String expected = store.getMostPlayer();
+        String actual = "Irina";
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void shouldSumTimeIra() {
+        GameStore store1 = new GameStore();
+
+        Game game3 = store1.publishGame("NFS", "Races");
+        Game game4 = store1.publishGame("FarCry 6", "Shooter");
+        store1.addPlayTime("Ira", 3);
+        store1.addPlayTime("Masha", 1);
+        store1.addPlayTime("Dasha", 5);
+        store1.addPlayTime("Ira", 4);
+        store1.getMostPlayer();
+
+        String actual = store1.getMostPlayer();
+        String expected = "Ira";
+
+        assertEquals(expected, actual);
     }
 
     // другие ваши тесты
