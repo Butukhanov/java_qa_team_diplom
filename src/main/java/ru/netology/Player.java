@@ -19,10 +19,15 @@ public class Player {
         return name;
     }
 
-    /** добавление игры игроку
-    если игра уже была, никаких изменений происходить не должно */
-    public void installGame(Game game) {
+    /**
+     * добавление игры игроку
+     * если игра уже была, никаких изменений происходить не должно
+     *
+     * @return
+     */
+    public Game installGame(Game game) {
         playedTime.put(game, 0);
+        return game;
     }
 
     /** игрок играет в игру game на протяжении hours часов
