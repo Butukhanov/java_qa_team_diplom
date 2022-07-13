@@ -39,8 +39,8 @@ public class PlayerTest {
         player.play(arcade2, 3);
         player.play(shooter, 2);
 
-        Game expected = arcade;
-        Game actual = player.mostPlayerByGenre("Аркады");
+        String expected = "Нетология Баттл Онлайн";
+        String actual = player.mostPlayerByGenre("Аркады");
         assertEquals(expected, actual);
     }
 
@@ -71,12 +71,12 @@ public class PlayerTest {
         player.installGame(arcade2);
         player.installGame(shooter);
 
-        player.play(arcade, 3);
+        player.play(arcade, 5);
         player.play(arcade2, 3);
         player.play(shooter, 3);
 
-        Game expected = arcade;
-        Game actual = player.mostPlayerByGenre("Аркады");
+        String expected = "Нетология Баттл Онлайн";
+        String actual = player.mostPlayerByGenre("Аркады");
         assertEquals(expected, actual);
     }
 
@@ -96,8 +96,8 @@ public class PlayerTest {
         player.play(arcade2, 2);
         player.play(shooter, 1);
 
-        int expected = 4;
-        int actual = player.sumGenre(arcade.getGenre());
+        int expected = 5;
+        int actual = player.sumGenre(shooter.getGenre());
         assertEquals(expected, actual);
     }
 
