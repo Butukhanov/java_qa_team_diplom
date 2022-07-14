@@ -101,21 +101,35 @@ public class PlayerTest {
         assertEquals(expected, actual);
     }
 
+//    @Test
+//    public void countInstallGame() {
+//        GameStore store = new GameStore();
+//        Game arcade = store.publishGame("Нетология Баттл Онлайн", "Аркады");
+//        Game arcade2 = store.publishGame("Нетология Баттл Онлайн 2", "Аркады");
+//        Game shooter = store.publishGame("Нетология Баттл Онлайн", "Шутер");
+//
+//        Player player = new Player("Petya");
+//        player.play(arcade, 3);
+//        player.play(arcade2, 2);
+//        player.play(shooter, 1);
+//
+//        Game expected = shooter;
+//        Game actual = player.installGame(shooter);
+//        assertEquals(expected, actual);
+//    }
+
     @Test
-    public void countInstallGame() {
+    public void addPlayGameNegativeValue() {
         GameStore store = new GameStore();
-        Game arcade = store.publishGame("Нетология Баттл Онлайн", "Аркады");
-        Game arcade2 = store.publishGame("Нетология Баттл Онлайн 2", "Аркады");
-        Game shooter = store.publishGame("Нетология Баттл Онлайн", "Шутер");
+        Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
 
         Player player = new Player("Petya");
-        player.play(arcade, 3);
-        player.play(arcade2, 2);
-        player.play(shooter, 1);
+        player.installGame(game);
 
-        Game expected = shooter;
-        Game actual = player.installGame(shooter);
-        assertEquals(expected, actual);
+
+        assertThrows(Exception.class, () -> {
+            player.play(game, -1);
+        });
     }
 
 }
