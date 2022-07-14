@@ -80,23 +80,21 @@ public class GameStoreTest {
     }
 
     @Test
-    public void addNegativePlaybackTime() {
+    public void addNegativePlayTime() {
         GameStore store = new GameStore();
 
         Game game1 = store.publishGame("NFS", "Races");
         Game game2 = store.publishGame("Far Cry", "Shooter");
         Game game3 = store.publishGame("Hitman", "Shooter");
 
-        store.addPlayTime("Roma", 3);
-        store.addPlayTime("Misha", 1);
-        store.addPlayTime("Denis", 5);
-        store.addPlayTime("Kirill", -5);
+        store.addPlayTime("Petya", 4);
+        store.addPlayTime("Anton", 2);
+        store.addPlayTime("Kirill", 6);
         store.getMostPlayer();
 
-        String actual = store.getMostPlayer();
-        String expected = "Kirill";
-
-        assertEquals(expected, actual);
+        assertThrows(RuntimeException.class, () -> {
+            store.addPlayTime("Petya", -4);
+        });
 
     }
 
