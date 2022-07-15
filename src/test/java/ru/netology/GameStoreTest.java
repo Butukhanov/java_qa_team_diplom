@@ -93,7 +93,7 @@ public class GameStoreTest {
         store.getMostPlayer();
 
         assertThrows(RuntimeException.class, () -> {
-            store.addPlayTime("Petya", -4);
+            store.addPlayTime("Petya", -5);
         });
 
     }
