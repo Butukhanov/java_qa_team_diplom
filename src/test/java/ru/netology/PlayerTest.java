@@ -96,7 +96,7 @@ public class PlayerTest {
         player.play(arcade2, 2);
         player.play(shooter, 1);
 
-        int expected = 5;
+        int expected = 1;
         int actual = player.sumGenre(shooter.getGenre());
         assertEquals(expected, actual);
     }
