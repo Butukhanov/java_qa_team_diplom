@@ -1,0 +1,54 @@
+[33mcommit 388b005723b1085fbc79b2025b1aa517f976c702[m[33m ([m[1;36mHEAD -> [m[1;32mGameStore[m[33m)[m
+Author: Aleksandr Butukhanov <avbutukhanov@gmail.com>
+Date:   Wed Jul 13 18:55:20 2022 +0800
+
+    fixing the player class
+
+[33mcommit 1d4064bbfe2ed72106b80fa4a1eac701552da03f[m
+Merge: 9b8c6da 5bdbf27
+Author: Aleksandr Butukhanov <avbutukhanov@gmail.com>
+Date:   Tue Jul 12 19:56:36 2022 +0800
+
+    Merge branch 'Player' of https://github.com/Butukhanov/java_qa_team_diplom into GameStore
+
+[33mcommit 9b8c6da231c5c44cec6f63bb41c43d7dc33b329d[m[33m ([m[1;31morigin/GameStore[m[33m)[m
+Author: Aleksandr Butukhanov <avbutukhanov@gmail.com>
+Date:   Tue Jul 12 19:40:01 2022 +0800
+
+    adding a test addNegativePlaybackTime
+
+[33mcommit 73db6967ed3c128cba11a08e20aebb8fbf016f27[m
+Author: Aleksandr Butukhanov <avbutukhanov@gmail.com>
+Date:   Tue Jul 12 19:08:21 2022 +0800
+
+    adding a test shouldSumTimePlayers
+
+[33mcommit 977eefe23dc08c7382312063d09867846136bac3[m
+Author: Aleksandr Butukhanov <avbutukhanov@gmail.com>
+Date:   Tue Jul 12 18:50:15 2022 +0800
+
+    adding a test shouldSumTimeIra
+
+[33mcommit 6a031929eb7e68aeb00e47903314db4e406cbefe[m
+Author: Aleksandr Butukhanov <avbutukhanov@gmail.com>
+Date:   Tue Jul 12 18:10:22 2022 +0800
+
+    test to test the method getMostPlayer
+
+[33mcommit 5bdbf27fa4a4752fc2eb3d95b1a0096f3ac08079[m[33m ([m[1;31morigin/Player[m[33m)[m
+Author: ekat1983 <shumkovakatya@yandex.ru>
+Date:   Thu Jul 7 20:53:41 2022 +0300
+
+    write a test
+
+[33mcommit 3cd01130fb9c0036fab09a8ca9e8ca308b5391f4[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Aleksandr <87312103+Butukhanov@users.noreply.github.com>
+Date:   Fri Jun 24 19:22:22 2022 +0800
+
+    Create maven.yml
+
+[33mcommit 6400e9c6f47550f242838125a3647bc4e3fe5723[m
+Author: Aleksandr Butukhanov <avbutukhanov@gmail.com>
+Date:   Fri Jun 24 19:19:53 2022 +0800
+
+    initial commit
